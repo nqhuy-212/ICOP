@@ -452,7 +452,7 @@
       </widget>
       <widget class="QWidget" name="tab_1">
        <attribute name="title">
-        <string>Danh sách CV</string>
+        <string>Danh sách công việc</string>
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_13">
         <item>
@@ -545,6 +545,11 @@
                   <widget class="QComboBox" name="cb101">
                    <item>
                     <property name="text">
+                     <string>Tất cả</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
                      <string>Chưa thực hiện</string>
                     </property>
                    </item>
@@ -575,6 +580,11 @@
                  </item>
                  <item>
                   <widget class="QComboBox" name="cb102">
+                   <item>
+                    <property name="text">
+                     <string>Tất cả</string>
+                    </property>
+                   </item>
                    <item>
                     <property name="text">
                      <string>Việc theo vị trí</string>
@@ -614,6 +624,11 @@
                  </item>
                  <item>
                   <widget class="QComboBox" name="cb103">
+                   <item>
+                    <property name="text">
+                     <string>Tất cả</string>
+                    </property>
+                   </item>
                    <item>
                     <property name="text">
                      <string>IC</string>
@@ -712,6 +727,12 @@
            </item>
            <item>
             <widget class="QWidget" name="widget_33" native="true">
+             <property name="maximumSize">
+              <size>
+               <width>120</width>
+               <height>16777215</height>
+              </size>
+             </property>
              <layout class="QVBoxLayout" name="verticalLayout_12">
               <property name="spacing">
                <number>0</number>
@@ -725,6 +746,12 @@
               <item>
                <widget class="QPushButton" name="bt102">
                 <property name="minimumSize">
+                 <size>
+                  <width>100</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
                  <size>
                   <width>100</width>
                   <height>40</height>
@@ -751,6 +778,12 @@
               <item>
                <widget class="QPushButton" name="bt104">
                 <property name="minimumSize">
+                 <size>
+                  <width>100</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
                  <size>
                   <width>100</width>
                   <height>40</height>
@@ -1575,6 +1608,8 @@
     <addaction name="menu13"/>
     <addaction name="menu14"/>
     <addaction name="actionDanh_s_ch_CBCNV"/>
+    <addaction name="actionTh_m_d_n"/>
+    <addaction name="actionDanh_s_ch_v_tr_c_ng_vi_c"/>
    </widget>
    <widget class="QMenu" name="menu_ng_xu_t">
     <property name="title">
@@ -1583,8 +1618,15 @@
     <addaction name="menu51"/>
     <addaction name="action_i_m_t_kh_u"/>
    </widget>
+   <widget class="QMenu" name="menuC_i_t">
+    <property name="title">
+     <string>Cài đặt</string>
+    </property>
+    <addaction name="actionC_i_t_c_s_d_li_u"/>
+   </widget>
    <addaction name="menu11_2"/>
    <addaction name="menu_ng_xu_t"/>
+   <addaction name="menuC_i_t"/>
   </widget>
   <action name="menu11">
    <property name="text">
@@ -1693,6 +1735,21 @@
   <action name="actionDanh_s_ch_CBCNV">
    <property name="text">
     <string>Danh sách CBCNV</string>
+   </property>
+  </action>
+  <action name="actionTh_m_d_n">
+   <property name="text">
+    <string>Danh sách dự án</string>
+   </property>
+  </action>
+  <action name="actionDanh_s_ch_v_tr_c_ng_vi_c">
+   <property name="text">
+    <string>Danh sách vị trí công việc</string>
+   </property>
+  </action>
+  <action name="actionC_i_t_c_s_d_li_u">
+   <property name="text">
+    <string>Cài đặt cơ sở dữ liệu</string>
    </property>
   </action>
  </widget>

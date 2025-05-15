@@ -4,8 +4,9 @@ import time
 import tempfile
 from pathlib import Path
 from datetime import datetime
-from typing import Generator 
+from typing import Generator
 from decimal import Decimal
+import sqlite3
 
 # PyQt5
 from PyQt5.QtCore import QDate
@@ -43,21 +44,12 @@ def get_resource_path(relative_path):
     return os.path.join(base_path, relative_path)
 
 def connect_to_db(): 
-    BASE_DIR = Path(__file__).resolve().parent
-    env_file = get_resource_path(".env")
-    load_dotenv(env_file)
     try:
-        connection = pyodbc.connect(
-        'DRIVER={SQL Server};'
-        f'SERVER={os.getenv("SERVER")};'
-        f'DATABASE={os.getenv("DB")};'
-        f'UID={os.getenv("UID")};'
-        f'PWD={os.getenv("PASSWORD")}'
-    )
-        # connection = sqlite3.connect(db_file)
+        db_file = "E:\Pyqt5\ICOP\IC.sqlite"
+        connection = sqlite3.connect(db_file)
         return connection
     except pyodbc.Error as e:
-        print(f"Lỗi khi kết nối tới máy chủ: {e}")
+        print(f"Lỗi khi kết nối tới cơ sở dữ liệu: {e}")
         return None
 
 def table_to_dataframe(table_widget,headers):
@@ -83,57 +75,57 @@ def table_to_dataframe(table_widget,headers):
 ui, _ = loadUiType(get_resource_path('app.ui'))
 
 #config URL cho engine
-BASE_DIR = Path(__file__).resolve().parent
-env_file = get_resource_path(".env")
-load_dotenv(env_file)
+# BASE_DIR = Path(__file__).resolve().parent
+# env_file = get_resource_path(".env")
+# load_dotenv(env_file)
 
-class Settings():
-    API_PREFIX = ''
-    DATABASE_1_URL = URL.create(
-        "mssql+pyodbc",
-        username=os.getenv("UID"),
-        password=os.getenv("PASSWORD"),
-        host=os.getenv("SERVER"),
-        port=1433,
-        database=os.getenv("DB"),
-        query={
-           "driver": "ODBC Driver 17 for SQL Server",
-           "TrustServerCertificate": "yes" 
-        }
-    )
+# class Settings():
+#     API_PREFIX = ''
+#     DATABASE_1_URL = URL.create(
+#         "mssql+pyodbc",
+#         username=os.getenv("UID"),
+#         password=os.getenv("PASSWORD"),
+#         host=os.getenv("SERVER"),
+#         port=1433,
+#         database=os.getenv("DB"),
+#         query={
+#            "driver": "ODBC Driver 17 for SQL Server",
+#            "TrustServerCertificate": "yes" 
+#         }
+#     )
 
-settings = Settings()
-#tạo engine để kêt nối database
-engine_1 = create_engine(settings.DATABASE_1_URL, pool_pre_ping=True)
-SessionLocal_1 = sessionmaker(autocommit=False, autoflush=False, bind=engine_1)
+# settings = Settings()
+# #tạo engine để kêt nối database
+# engine_1 = create_engine(settings.DATABASE_1_URL, pool_pre_ping=True)
+# SessionLocal_1 = sessionmaker(autocommit=False, autoflush=False, bind=engine_1)
 
-Base = declarative_base()
+# Base = declarative_base()
 
-def get_db_1() -> Generator:
-    try:
-        db = SessionLocal_1()
-        yield db
-    finally:
-        db.close()
-#hàm import to sql       
-def import_to_sql(df: DataFrame, table_name: str, dtype: dict, engine: Engine):
-    # Show processing message
-    processing_message = QMessageBox()
-    processing_message.setWindowTitle("Đang xử lý")
-    processing_message.setText("Đang xử lý dữ liệu, vui lòng chờ...")
-    # processing_message.setStandardButtons(QMessageBox.NoButton)
-    processing_message.setModal(True)
-    processing_message.show()
-    QApplication.processEvents()  # Ensure UI updates during processing
-    time.sleep(0.01)  # Simulate processing time
-    try:
-        with engine.connect() as connection:
-            df.to_sql(name=table_name, con=connection, if_exists="append", index=False, dtype=dtype)
+# def get_db_1() -> Generator:
+#     try:
+#         db = SessionLocal_1()
+#         yield db
+#     finally:
+#         db.close()
+# #hàm import to sql       
+# def import_to_sql(df: DataFrame, table_name: str, dtype: dict, engine: Engine):
+#     # Show processing message
+#     processing_message = QMessageBox()
+#     processing_message.setWindowTitle("Đang xử lý")
+#     processing_message.setText("Đang xử lý dữ liệu, vui lòng chờ...")
+#     # processing_message.setStandardButtons(QMessageBox.NoButton)
+#     processing_message.setModal(True)
+#     processing_message.show()
+#     QApplication.processEvents()  # Ensure UI updates during processing
+#     time.sleep(0.01)  # Simulate processing time
+#     try:
+#         with engine.connect() as connection:
+#             df.to_sql(name=table_name, con=connection, if_exists="append", index=False, dtype=dtype)
             
-        processing_message.close()
-    except Exception as e:
-        processing_message.close()
-        # raise HTTPException(status_code=500, detail=f"Error: {str(e)}")
+#         processing_message.close()
+#     except Exception as e:
+#         processing_message.close()
+#         # raise HTTPException(status_code=500, detail=f"Error: {str(e)}")
 
 class MainApp(QMainWindow,ui):
     def __init__(self):
@@ -158,16 +150,12 @@ class MainApp(QMainWindow,ui):
         ####
         self.bt102.clicked.connect(self.delete_selected_rows_QA)
         self.bt202.clicked.connect(self.delete_selected_rows_Checker)
-        self.bt103.clicked.connect(self.import_from_excel_ETS)
-        self.bt203.clicked.connect(self.import_from_excel_Checker)
-        self.bt104.clicked.connect(self.tai_xuong_file_mau_QA)
         self.bt204.clicked.connect(self.tai_xuong_file_mau_Checker)
-        self.bt105.clicked.connect(self.search_ETS)
         self.bt205.clicked.connect(self.search_Checker)
         ####
 
     def login(self):
-        fty = self.cb001.currentText()
+        # fty = self.cb001.currentText()
         un = self.tb001.text()
         pw = self.tb002.text()
         
@@ -177,10 +165,10 @@ class MainApp(QMainWindow,ui):
             return
         cursor = connection.cursor()
         cursor.execute("""
-                SELECT FAC_CODE, EMP_CODE, EMP_NAME , DEPT_CODE
-                FROM USER_LOGIN 
-                WHERE FAC_CODE = ? AND EMP_CODE = ? AND PASS_WORD = ? AND PERMISTION Like '%TNC,%'
-            """, (fty, un, pw))
+                SELECT Ma_phong_ban, MNV, Ho_ten , Phan_quyen
+                FROM DANH_SACH_CBCNV 
+                WHERE MNV = ? AND Mat_khau = ?
+            """, (un, pw))
         result = cursor.fetchone()
         if connection:
             connection.close()    
@@ -188,8 +176,9 @@ class MainApp(QMainWindow,ui):
         if result:
             self.menuBar.setVisible(True)
             self.tabWidget.setCurrentIndex(1)
-            self.lb003.setText("Phần mềm nhập dữ liệu TNC")
+            self.lb003.setText("Danh sách công việc")
             self.lb000.setText(result[0])
+            self.lb004.setText(result[1])
             self.lb001.setText(result[2])
             # QSound.play(":/sounds/sounds/success.wav") # Phát âm thanh thành công
             #progress bar
@@ -203,7 +192,7 @@ class MainApp(QMainWindow,ui):
             self.progressBar_3.setMinimum(0)
             self.progressBar_3.setMaximum(100)
 
-            self.tong_so_dong_ETS()
+            # self.tong_so_dong_ETS()
         else:
             # QSound.play(":/sounds/sounds/error.wav") # Phát âm thanh lỗi
             self.lb002.setText("Tài khoản hoặc mật khẩu không đúng!")
