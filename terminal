@@ -1,0 +1,19 @@
+pyrcc5 resources.qrc -o resources_rc.py
+
+C:\Users\rgnqhuy\AppData\Local\Programs\Python\Python311\python.exe -m venv myenv
+
+myenv\Scripts\activate
+
+deactivate
+
+pip freeze > requirements.txt
+
+pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org python-dotenv
+
+pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org --timeout 100 pyqt5-tools
+
+pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org PyQtWebEngine
+
+pyinstaller --onefile --windowed --icon=logo.ico --add-data "resources_rc.py;." --add-data ".env;." --add-data "resources.qrc;." --add-data "app.ui;." app.py
+
+python app.py
