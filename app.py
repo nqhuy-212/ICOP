@@ -45,7 +45,8 @@ def get_resource_path(relative_path):
 
 def connect_to_db(): 
     try:
-        db_file = "E:\Pyqt5\ICOP\IC.sqlite"
+        # db_file = "E:\Pyqt5\ICOP\IC.sqlite"
+        db_file = "E:\VA\ICOP\IC.sqlite"
         connection = sqlite3.connect(db_file)
         return connection
     except pyodbc.Error as e:

@@ -289,12 +289,6 @@
     <file>icons/zoom-out.svg</file>
   </qresource>
   <qresource prefix="pictures">
-    <file>Icop.jpg</file>
-    <file>pictures/pics/logo.png</file>
-  </qresource>
-  <qresource prefix="sounds">
-    <file>sounds/bellding.wav</file>
-    <file>sounds/success.wav</file>
-    <file>sounds/error.wav</file>
+    <file>pics/Icop.jpg</file>
   </qresource>
 </RCC>
