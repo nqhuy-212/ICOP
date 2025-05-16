@@ -1,1 +1,17 @@
+# Virtual environment
 myenv/
+
+# PyInstaller build folders
+dist/
+build/
+
+# __pycache__ folders
+__pycache__/
+
+# Compiled Python files
+*.pyc
+*.pyo
+*.pyd
+
+# Spec file (nếu không muốn track)
+*.spec

@@ -14,6 +14,6 @@ pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-hos
 
 pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org PyQtWebEngine
 
-pyinstaller --onefile --windowed --icon=logo.ico --add-data "resources_rc.py;." --add-data ".env;." --add-data "resources.qrc;." --add-data "app.ui;." app.py
+pyinstaller --onefile --windowed --icon=logo.ico --add-data "resources_rc.py;." --add-data "resources.qrc;." --add-data "app.ui;." app.py
 
 python app.py

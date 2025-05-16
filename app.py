@@ -9,9 +9,6 @@ from decimal import Decimal
 import sqlite3
 # import pyodbc
 
-import pyqt5_tools
-print(pyqt5_tools.__path__)
-
 # PyQt5
 from PyQt5.QtCore import QDate
 from PyQt5.QtGui import QColor, QPixmap

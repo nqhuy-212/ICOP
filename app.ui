@@ -192,7 +192,7 @@
        <enum>QTabWidget::South</enum>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="tab_0">
        <attribute name="title">
@@ -1363,47 +1363,7 @@
                          </item>
                          <item>
                           <property name="text">
-                           <string>Trưởng nhóm hành chính</string>
-                          </property>
-                         </item>
-                         <item>
-                          <property name="text">
-                           <string>Nhân viên hành chính</string>
-                          </property>
-                         </item>
-                         <item>
-                          <property name="text">
-                           <string>Lái xe chở người</string>
-                          </property>
-                         </item>
-                         <item>
-                          <property name="text">
-                           <string>Bảo vệ</string>
-                          </property>
-                         </item>
-                         <item>
-                          <property name="text">
-                           <string>Tạp vụ</string>
-                          </property>
-                         </item>
-                         <item>
-                          <property name="text">
-                           <string>Nhân viên bếp ăn</string>
-                          </property>
-                         </item>
-                         <item>
-                          <property name="text">
-                           <string>Nhân viên Thủ quỹ</string>
-                          </property>
-                         </item>
-                         <item>
-                          <property name="text">
-                           <string>Trưởng nhóm Nhân sự</string>
-                          </property>
-                         </item>
-                         <item>
-                          <property name="text">
-                           <string>Nhân viên Nhân sự</string>
+                           <string>Chức năng chuyên môn theo vị trí</string>
                           </property>
                          </item>
                          <item>
@@ -1436,7 +1396,22 @@
                         <widget class="QComboBox" name="comboBox_4">
                          <item>
                           <property name="text">
-                           <string>Thực thi công tác nhân sự</string>
+                           <string>Tham mưu pháp luật </string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>Tham mưu về hoạt động nội bộ </string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>Tham mưu về chuyên môn </string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>Tham mưu các vấn đề khác</string>
                           </property>
                          </item>
                         </widget>
@@ -1456,7 +1431,7 @@
                        <item>
                         <widget class="QLabel" name="label_29">
                          <property name="text">
-                          <string>Nhiệm vụ cụ thể</string>
+                          <string>Nhiệm vụ cụ thể </string>
                          </property>
                         </widget>
                        </item>
@@ -1470,42 +1445,22 @@
                          </property>
                          <item>
                           <property name="text">
-                           <string>4NVNS1</string>
+                           <string>1.1.1</string>
                           </property>
                          </item>
                          <item>
                           <property name="text">
-                           <string>4NVNS2</string>
+                           <string>1.2.1</string>
                           </property>
                          </item>
                          <item>
                           <property name="text">
-                           <string>4NVNS3</string>
+                           <string>1.3.1</string>
                           </property>
                          </item>
                          <item>
                           <property name="text">
-                           <string>4NVNS4</string>
-                          </property>
-                         </item>
-                         <item>
-                          <property name="text">
-                           <string>4NVNS5</string>
-                          </property>
-                         </item>
-                         <item>
-                          <property name="text">
-                           <string>4NVNS6</string>
-                          </property>
-                         </item>
-                         <item>
-                          <property name="text">
-                           <string>4NVNS7</string>
-                          </property>
-                         </item>
-                         <item>
-                          <property name="text">
-                           <string>4NVNS8</string>
+                           <string>1.4.1</string>
                           </property>
                          </item>
                         </widget>
