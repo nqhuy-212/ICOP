@@ -7,6 +7,10 @@ from datetime import datetime
 from typing import Generator
 from decimal import Decimal
 import sqlite3
+# import pyodbc
+
+import pyqt5_tools
+print(pyqt5_tools.__path__)
 
 # PyQt5
 from PyQt5.QtCore import QDate
@@ -45,10 +49,19 @@ def get_resource_path(relative_path):
 
 def connect_to_db(): 
     try:
-        # db_file = "E:\Pyqt5\ICOP\IC.sqlite"
-        db_file = "E:\VA\ICOP\IC.sqlite"
+        db_file = r"D:\IC.sqlite"
+        # password = "huyie"
         connection = sqlite3.connect(db_file)
         return connection
+
+        # conn_str = (
+        #     r'DRIVER={Microsoft Access Driver (*.mdb, *.accdb)};'
+        #     rf'DBQ={db_file};'
+        #     rf'PWD={password};'
+        # )
+
+        # conn = pyodbc.connect(conn_str)
+        # return conn
     except pyodbc.Error as e:
         print(f"Lỗi khi kết nối tới cơ sở dữ liệu: {e}")
         return None
@@ -140,20 +153,17 @@ class MainApp(QMainWindow,ui):
         # self.toolBar.setVisible(False)
         self.bt001.clicked.connect(self.login)
         self.menu11.triggered.connect(self.show_ETS_tab)
-        self.menu13.triggered.connect(self.show_SAM_tab)
+        self.menu13.triggered.connect(self.show_tab_2)
         self.menu14.triggered.connect(self.show_QCO_tab)
         self.menu51.triggered.connect(self.show_login_tab)
 
         self.de101.setDate(QDate.currentDate().addDays(-365))
         self.de102.setDate(QDate.currentDate())
-        self.de301.setDate(QDate.currentDate().addDays(-365))
-        self.de302.setDate(QDate.currentDate())
-        ####
-        self.bt102.clicked.connect(self.delete_selected_rows_QA)
-        self.bt202.clicked.connect(self.delete_selected_rows_Checker)
-        self.bt204.clicked.connect(self.tai_xuong_file_mau_Checker)
-        self.bt205.clicked.connect(self.search_Checker)
-        ####
+        # self.de301.setDate(QDate.currentDate().addDays(-365))
+        # self.de302.setDate(QDate.currentDate())
+        # ####
+        # self.bt204.clicked.connect(self.tai_xuong_file_mau_Checker)
+        # ####
 
     def login(self):
         # fty = self.cb001.currentText()
@@ -186,12 +196,6 @@ class MainApp(QMainWindow,ui):
             self.progressBar.setValue(0)  # Khởi tạo giá trị là 0
             self.progressBar.setMinimum(0)
             self.progressBar.setMaximum(100)
-            self.progressBar_2.setValue(0)  # Khởi tạo giá trị là 0
-            self.progressBar_2.setMinimum(0)
-            self.progressBar_2.setMaximum(100)
-            self.progressBar_3.setValue(0)  # Khởi tạo giá trị là 0
-            self.progressBar_3.setMinimum(0)
-            self.progressBar_3.setMaximum(100)
 
             # self.tong_so_dong_ETS()
         else:
@@ -306,17 +310,17 @@ class MainApp(QMainWindow,ui):
                         
     def show_ETS_tab(self):
         self.tabWidget.setCurrentIndex(1) 
-        self.lb003.setText("Dữ liệu dập thẻ ETS")
+        self.lb003.setText("Danh sách công việc")
      
-    def show_SAM_tab(self):
+    def show_tab_2(self):
         self.menuBar.setVisible(True)
         self.tabWidget.setCurrentIndex(2) 
-        self.lb003.setText("Dữ liệu SAM")  
+        self.lb003.setText("Thêm công việc mới")  
     
     def show_QCO_tab(self):
         self.menuBar.setVisible(True)
         self.tabWidget.setCurrentIndex(3) 
-        self.lb003.setText("Dữ liệu thay đơn hàng")  
+        self.lb003.setText("Sửa xóa thông tin công việc")  
         
     def tong_so_dong_ETS(self):
         rows = self.tableWidget.rowCount()

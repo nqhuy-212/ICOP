@@ -142,13 +142,13 @@
          </property>
          <property name="minimumSize">
           <size>
-           <width>250</width>
+           <width>350</width>
            <height>80</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>250</width>
+           <width>350</width>
            <height>80</height>
           </size>
          </property>
@@ -192,7 +192,7 @@
        <enum>QTabWidget::South</enum>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="tab_0">
        <attribute name="title">
@@ -473,7 +473,7 @@
                  <item>
                   <widget class="QLabel" name="label_3">
                    <property name="text">
-                    <string>Ngày:</string>
+                    <string>Khoảng ngày</string>
                    </property>
                   </widget>
                  </item>
@@ -512,7 +512,7 @@
                  <item>
                   <widget class="QLabel" name="label_8">
                    <property name="text">
-                    <string>Phân loại dự án:</string>
+                    <string>Phân loại dự án</string>
                    </property>
                   </widget>
                  </item>
@@ -556,7 +556,7 @@
                  <item>
                   <widget class="QLabel" name="label_9">
                    <property name="text">
-                    <string>Trạng thái:</string>
+                    <string>Trạng thái</string>
                    </property>
                   </widget>
                  </item>
@@ -593,7 +593,7 @@
                  <item>
                   <widget class="QLabel" name="label_11">
                    <property name="text">
-                    <string>Phân loại công việc:</string>
+                    <string>Phân loại công việc</string>
                    </property>
                   </widget>
                  </item>
@@ -637,7 +637,7 @@
                  <item>
                   <widget class="QLabel" name="label_12">
                    <property name="text">
-                    <string>Mã công ty:</string>
+                    <string>Mã công ty</string>
                    </property>
                   </widget>
                  </item>
@@ -766,13 +766,13 @@
                <widget class="QPushButton" name="bt102">
                 <property name="minimumSize">
                  <size>
-                  <width>100</width>
+                  <width>120</width>
                   <height>40</height>
                  </size>
                 </property>
                 <property name="maximumSize">
                  <size>
-                  <width>100</width>
+                  <width>120</width>
                   <height>40</height>
                  </size>
                 </property>
@@ -795,16 +795,16 @@
                </widget>
               </item>
               <item>
-               <widget class="QPushButton" name="bt104">
+               <widget class="QPushButton" name="bt101">
                 <property name="minimumSize">
                  <size>
-                  <width>100</width>
+                  <width>120</width>
                   <height>40</height>
                  </size>
                 </property>
                 <property name="maximumSize">
                  <size>
-                  <width>100</width>
+                  <width>120</width>
                   <height>40</height>
                  </size>
                 </property>
@@ -1010,493 +1010,6 @@
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_19">
         <item>
-         <widget class="QWidget" name="widget_47" native="true">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <widget class="QWidget" name="widget_32" native="true">
-           <property name="geometry">
-            <rect>
-             <x>0</x>
-             <y>20</y>
-             <width>1158</width>
-             <height>281</height>
-            </rect>
-           </property>
-           <layout class="QHBoxLayout" name="horizontalLayout_22">
-            <item>
-             <widget class="QWidget" name="widget_27" native="true">
-              <layout class="QVBoxLayout" name="verticalLayout_11">
-               <item>
-                <widget class="QWidget" name="widget_37" native="true">
-                 <layout class="QHBoxLayout" name="horizontalLayout_8">
-                  <property name="topMargin">
-                   <number>0</number>
-                  </property>
-                  <property name="bottomMargin">
-                   <number>0</number>
-                  </property>
-                  <item>
-                   <widget class="QLabel" name="label_6">
-                    <property name="text">
-                     <string>Ngày</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QDateEdit" name="de101_2">
-                    <property name="displayFormat">
-                     <string>d/M/yyyy</string>
-                    </property>
-                    <property name="calendarPopup">
-                     <bool>true</bool>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
-               </item>
-               <item>
-                <widget class="QWidget" name="widget_38" native="true">
-                 <layout class="QHBoxLayout" name="horizontalLayout_23">
-                  <property name="topMargin">
-                   <number>0</number>
-                  </property>
-                  <property name="bottomMargin">
-                   <number>0</number>
-                  </property>
-                  <item>
-                   <widget class="QLabel" name="label_10">
-                    <property name="text">
-                     <string>Phân loại dự án</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QComboBox" name="comboBox_2">
-                    <item>
-                     <property name="text">
-                      <string>Việc theo dự án</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>Công việc hàng ngày</string>
-                     </property>
-                    </item>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
-               </item>
-               <item>
-                <widget class="QWidget" name="widget_55" native="true">
-                 <layout class="QHBoxLayout" name="horizontalLayout_32">
-                  <property name="topMargin">
-                   <number>0</number>
-                  </property>
-                  <property name="bottomMargin">
-                   <number>0</number>
-                  </property>
-                  <item>
-                   <widget class="QLabel" name="label_21">
-                    <property name="text">
-                     <string>Mã dự án</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QComboBox" name="comboBox_3"/>
-                  </item>
-                 </layout>
-                </widget>
-               </item>
-               <item>
-                <widget class="QWidget" name="widget_59" native="true">
-                 <layout class="QHBoxLayout" name="horizontalLayout_36">
-                  <property name="topMargin">
-                   <number>0</number>
-                  </property>
-                  <property name="bottomMargin">
-                   <number>0</number>
-                  </property>
-                  <item>
-                   <widget class="QLabel" name="label_24">
-                    <property name="text">
-                     <string>Tên dự án</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QLabel" name="label_25">
-                    <property name="text">
-                     <string>Tên dự án</string>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
-               </item>
-               <item>
-                <widget class="QWidget" name="widget_57" native="true">
-                 <layout class="QHBoxLayout" name="horizontalLayout_34">
-                  <property name="topMargin">
-                   <number>0</number>
-                  </property>
-                  <property name="bottomMargin">
-                   <number>0</number>
-                  </property>
-                  <item>
-                   <widget class="QLabel" name="label_23">
-                    <property name="text">
-                     <string>Mã dự án mới</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QLineEdit" name="lineEdit_2">
-                    <property name="sizePolicy">
-                     <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                      <horstretch>0</horstretch>
-                      <verstretch>0</verstretch>
-                     </sizepolicy>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
-               </item>
-               <item>
-                <widget class="QWidget" name="widget_56" native="true">
-                 <layout class="QHBoxLayout" name="horizontalLayout_33">
-                  <property name="topMargin">
-                   <number>0</number>
-                  </property>
-                  <property name="bottomMargin">
-                   <number>0</number>
-                  </property>
-                  <item>
-                   <widget class="QLabel" name="label_22">
-                    <property name="text">
-                     <string>Tên dự án mới</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QLineEdit" name="lineEdit">
-                    <property name="sizePolicy">
-                     <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                      <horstretch>0</horstretch>
-                      <verstretch>0</verstretch>
-                     </sizepolicy>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
-               </item>
-               <item>
-                <widget class="QWidget" name="widget_58" native="true">
-                 <layout class="QHBoxLayout" name="horizontalLayout_35">
-                  <property name="topMargin">
-                   <number>0</number>
-                  </property>
-                  <property name="bottomMargin">
-                   <number>0</number>
-                  </property>
-                  <item>
-                   <widget class="QPushButton" name="bt204_2">
-                    <property name="minimumSize">
-                     <size>
-                      <width>200</width>
-                      <height>40</height>
-                     </size>
-                    </property>
-                    <property name="maximumSize">
-                     <size>
-                      <width>200</width>
-                      <height>40</height>
-                     </size>
-                    </property>
-                    <property name="toolTip">
-                     <string>Lưu dự án mới</string>
-                    </property>
-                    <property name="text">
-                     <string/>
-                    </property>
-                    <property name="icon">
-                     <iconset resource="resources.qrc">
-                      <normaloff>:/icons/icons/save.svg</normaloff>:/icons/icons/save.svg</iconset>
-                    </property>
-                    <property name="iconSize">
-                     <size>
-                      <width>30</width>
-                      <height>30</height>
-                     </size>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
-               </item>
-              </layout>
-             </widget>
-            </item>
-            <item>
-             <widget class="QWidget" name="widget_41" native="true">
-              <layout class="QVBoxLayout" name="verticalLayout_15">
-               <item>
-                <widget class="QWidget" name="widget_50" native="true">
-                 <layout class="QHBoxLayout" name="horizontalLayout_24">
-                  <property name="topMargin">
-                   <number>0</number>
-                  </property>
-                  <property name="bottomMargin">
-                   <number>0</number>
-                  </property>
-                  <item>
-                   <widget class="QLabel" name="label_14">
-                    <property name="text">
-                     <string>Trạng thái</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QComboBox" name="cb101_2">
-                    <item>
-                     <property name="text">
-                      <string>Tất cả</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>Chưa thực hiện</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>Đang thực hiện</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>Đã hoàn thành</string>
-                     </property>
-                    </item>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
-               </item>
-               <item>
-                <widget class="QWidget" name="widget_51" native="true">
-                 <layout class="QHBoxLayout" name="horizontalLayout_26">
-                  <item>
-                   <widget class="QLabel" name="label_16">
-                    <property name="text">
-                     <string>Phân loại công việc</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QComboBox" name="cb102_2">
-                    <item>
-                     <property name="text">
-                      <string>Tất cả</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>Việc theo vị trí</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>Việc khác được giao</string>
-                     </property>
-                    </item>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
-               </item>
-              </layout>
-             </widget>
-            </item>
-            <item>
-             <widget class="QWidget" name="widget_52" native="true">
-              <layout class="QVBoxLayout" name="verticalLayout_23">
-               <item>
-                <widget class="QWidget" name="widget_53" native="true">
-                 <layout class="QHBoxLayout" name="horizontalLayout_30">
-                  <property name="topMargin">
-                   <number>0</number>
-                  </property>
-                  <property name="bottomMargin">
-                   <number>0</number>
-                  </property>
-                  <item>
-                   <widget class="QLabel" name="label_19">
-                    <property name="text">
-                     <string>Mã công ty</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QComboBox" name="cb103_2">
-                    <item>
-                     <property name="text">
-                      <string>Tất cả</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>IC</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>IB</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>ISV</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>LV</string>
-                     </property>
-                    </item>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
-               </item>
-               <item>
-                <widget class="QWidget" name="widget_54" native="true">
-                 <layout class="QHBoxLayout" name="horizontalLayout_31">
-                  <property name="topMargin">
-                   <number>0</number>
-                  </property>
-                  <property name="bottomMargin">
-                   <number>0</number>
-                  </property>
-                  <item>
-                   <widget class="QLabel" name="label_20">
-                    <property name="text">
-                     <string>Mã phòng ban</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QComboBox" name="cb104_2">
-                    <item>
-                     <property name="text">
-                      <string>Tất cả</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>BD</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>AD</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>OM</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>HR</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>LD</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>CB</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>FD</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>SQ</string>
-                     </property>
-                    </item>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
-               </item>
-              </layout>
-             </widget>
-            </item>
-           </layout>
-          </widget>
-         </widget>
-        </item>
-        <item>
-         <widget class="QWidget" name="widget_30" native="true">
-          <layout class="QHBoxLayout" name="horizontalLayout_18">
-           <item>
-            <widget class="QWidget" name="widget_44" native="true">
-             <layout class="QHBoxLayout" name="horizontalLayout_17">
-              <item>
-               <widget class="QPushButton" name="bt204">
-                <property name="minimumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
-                <property name="toolTip">
-                 <string>Lưu công việc</string>
-                </property>
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="icon">
-                 <iconset resource="resources.qrc">
-                  <normaloff>:/icons/icons/save.svg</normaloff>:/icons/icons/save.svg</iconset>
-                </property>
-                <property name="iconSize">
-                 <size>
-                  <width>30</width>
-                  <height>30</height>
-                 </size>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-        </item>
-        <item>
          <widget class="QWidget" name="widget_35" native="true">
           <layout class="QVBoxLayout" name="verticalLayout_10">
            <property name="spacing">
@@ -1509,20 +1022,730 @@
             <number>0</number>
            </property>
            <item>
-            <widget class="QLabel" name="lb201">
-             <property name="font">
-              <font>
-               <pointsize>12</pointsize>
-              </font>
+            <widget class="QWidget" name="widget_47" native="true">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
              </property>
-             <property name="styleSheet">
-              <string notr="true"/>
+             <layout class="QVBoxLayout" name="verticalLayout_23">
+              <item>
+               <widget class="QWidget" name="widget_32" native="true">
+                <layout class="QHBoxLayout" name="horizontalLayout_22">
+                 <item>
+                  <widget class="QWidget" name="widget_27" native="true">
+                   <layout class="QVBoxLayout" name="verticalLayout_11">
+                    <item>
+                     <widget class="QWidget" name="widget_53" native="true">
+                      <layout class="QHBoxLayout" name="horizontalLayout_30">
+                       <property name="topMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
+                       <item>
+                        <widget class="QLabel" name="label_19">
+                         <property name="text">
+                          <string>Mã công ty</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QComboBox" name="cb103_2">
+                         <item>
+                          <property name="text">
+                           <string>IC</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>IB</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>ISV</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>LV</string>
+                          </property>
+                         </item>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QWidget" name="widget_54" native="true">
+                      <layout class="QHBoxLayout" name="horizontalLayout_31">
+                       <property name="topMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
+                       <item>
+                        <widget class="QLabel" name="label_20">
+                         <property name="text">
+                          <string>Nhóm</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QComboBox" name="cb104_2">
+                         <item>
+                          <property name="text">
+                           <string>Hành chính</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>Nhân sự</string>
+                          </property>
+                         </item>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QWidget" name="widget_38" native="true">
+                      <layout class="QHBoxLayout" name="horizontalLayout_23">
+                       <property name="topMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
+                       <item>
+                        <widget class="QLabel" name="label_10">
+                         <property name="text">
+                          <string>Phân loại dự án</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QComboBox" name="comboBox_2">
+                         <item>
+                          <property name="text">
+                           <string>Việc theo dự án</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>Công việc hàng ngày</string>
+                          </property>
+                         </item>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QWidget" name="widget_55" native="true">
+                      <layout class="QHBoxLayout" name="horizontalLayout_32">
+                       <property name="topMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
+                       <item>
+                        <widget class="QLabel" name="label_21">
+                         <property name="text">
+                          <string>Mã dự án</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QComboBox" name="comboBox_3">
+                         <item>
+                          <property name="text">
+                           <string>DA.1.1</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>DA.1.2</string>
+                          </property>
+                         </item>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QWidget" name="widget_59" native="true">
+                      <layout class="QHBoxLayout" name="horizontalLayout_36">
+                       <property name="topMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
+                       <item>
+                        <widget class="QLabel" name="label_24">
+                         <property name="text">
+                          <string>Tên dự án</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLabel" name="label_25">
+                         <property name="text">
+                          <string>Tên dự án 1</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QWidget" name="widget_57" native="true">
+                      <layout class="QHBoxLayout" name="horizontalLayout_34">
+                       <property name="topMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
+                       <item>
+                        <widget class="QLabel" name="label_23">
+                         <property name="text">
+                          <string>Mã dự án mới</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLineEdit" name="lineEdit_2">
+                         <property name="sizePolicy">
+                          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                           <horstretch>0</horstretch>
+                           <verstretch>0</verstretch>
+                          </sizepolicy>
+                         </property>
+                         <property name="text">
+                          <string/>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QWidget" name="widget_56" native="true">
+                      <layout class="QHBoxLayout" name="horizontalLayout_33">
+                       <property name="topMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
+                       <item>
+                        <widget class="QLabel" name="label_22">
+                         <property name="text">
+                          <string>Tên dự án mới</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLineEdit" name="lineEdit">
+                         <property name="sizePolicy">
+                          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                           <horstretch>0</horstretch>
+                           <verstretch>0</verstretch>
+                          </sizepolicy>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QWidget" name="widget_58" native="true">
+                      <layout class="QHBoxLayout" name="horizontalLayout_35">
+                       <property name="topMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
+                       <item>
+                        <spacer name="horizontalSpacer">
+                         <property name="orientation">
+                          <enum>Qt::Horizontal</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>40</width>
+                           <height>20</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
+                       <item>
+                        <widget class="QPushButton" name="bt201">
+                         <property name="minimumSize">
+                          <size>
+                           <width>200</width>
+                           <height>40</height>
+                          </size>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>200</width>
+                           <height>40</height>
+                          </size>
+                         </property>
+                         <property name="toolTip">
+                          <string>Lưu dự án mới</string>
+                         </property>
+                         <property name="text">
+                          <string/>
+                         </property>
+                         <property name="icon">
+                          <iconset resource="resources.qrc">
+                           <normaloff>:/icons/icons/save.svg</normaloff>:/icons/icons/save.svg</iconset>
+                         </property>
+                         <property name="iconSize">
+                          <size>
+                           <width>30</width>
+                           <height>30</height>
+                          </size>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QWidget" name="widget_41" native="true">
+                   <layout class="QVBoxLayout" name="verticalLayout_15">
+                    <item>
+                     <widget class="QWidget" name="widget_61" native="true">
+                      <layout class="QHBoxLayout" name="horizontalLayout_38">
+                       <property name="topMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
+                       <item>
+                        <widget class="QLabel" name="label_27">
+                         <property name="text">
+                          <string>Chức năng</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QComboBox" name="comboBox_5">
+                         <item>
+                          <property name="text">
+                           <string>Tham mưu</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>Hoạch định chiến lược, mục tiêu và xây dựng kế hoạch</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>Quản lý điều hành chung hoạt động Phòng/Ban</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>Trưởng nhóm hành chính</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>Nhân viên hành chính</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>Lái xe chở người</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>Bảo vệ</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>Tạp vụ</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>Nhân viên bếp ăn</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>Nhân viên Thủ quỹ</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>Trưởng nhóm Nhân sự</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>Nhân viên Nhân sự</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>Chức năng khác</string>
+                          </property>
+                         </item>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QWidget" name="widget_60" native="true">
+                      <layout class="QHBoxLayout" name="horizontalLayout_37">
+                       <property name="topMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
+                       <item>
+                        <widget class="QLabel" name="label_26">
+                         <property name="text">
+                          <string>Nhiệm vụ</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QComboBox" name="comboBox_4">
+                         <item>
+                          <property name="text">
+                           <string>Thực thi công tác nhân sự</string>
+                          </property>
+                         </item>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QWidget" name="widget_63" native="true">
+                      <layout class="QHBoxLayout" name="horizontalLayout_40">
+                       <property name="topMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
+                       <item>
+                        <widget class="QLabel" name="label_29">
+                         <property name="text">
+                          <string>Nhiệm vụ cụ thể</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QComboBox" name="comboBox_7">
+                         <property name="maximumSize">
+                          <size>
+                           <width>16777215</width>
+                           <height>16777215</height>
+                          </size>
+                         </property>
+                         <item>
+                          <property name="text">
+                           <string>4NVNS1</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>4NVNS2</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>4NVNS3</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>4NVNS4</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>4NVNS5</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>4NVNS6</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>4NVNS7</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>4NVNS8</string>
+                          </property>
+                         </item>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QWidget" name="widget_64" native="true">
+                      <layout class="QHBoxLayout" name="horizontalLayout_41">
+                       <property name="topMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
+                       <item>
+                        <widget class="QLabel" name="label_30">
+                         <property name="text">
+                          <string>Tên công việc</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QComboBox" name="comboBox_8">
+                         <item>
+                          <property name="text">
+                           <string>Công việc 1</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>Công việc 2</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>Công việc 3</string>
+                          </property>
+                         </item>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QWidget" name="widget_65" native="true">
+                      <layout class="QHBoxLayout" name="horizontalLayout_42">
+                       <property name="topMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
+                       <item>
+                        <widget class="QLabel" name="label_31">
+                         <property name="text">
+                          <string>Tên công việc mới</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLineEdit" name="lineEdit_3">
+                         <property name="sizePolicy">
+                          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                           <horstretch>0</horstretch>
+                           <verstretch>0</verstretch>
+                          </sizepolicy>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QWidget" name="widget_66" native="true">
+                      <layout class="QHBoxLayout" name="horizontalLayout_43">
+                       <property name="topMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
+                       <item>
+                        <spacer name="horizontalSpacer_2">
+                         <property name="orientation">
+                          <enum>Qt::Horizontal</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>40</width>
+                           <height>20</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
+                       <item>
+                        <widget class="QPushButton" name="bt201_3">
+                         <property name="minimumSize">
+                          <size>
+                           <width>200</width>
+                           <height>40</height>
+                          </size>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>200</width>
+                           <height>40</height>
+                          </size>
+                         </property>
+                         <property name="toolTip">
+                          <string>Lưu dự án mới</string>
+                         </property>
+                         <property name="text">
+                          <string/>
+                         </property>
+                         <property name="icon">
+                          <iconset resource="resources.qrc">
+                           <normaloff>:/icons/icons/save.svg</normaloff>:/icons/icons/save.svg</iconset>
+                         </property>
+                         <property name="iconSize">
+                          <size>
+                           <width>30</width>
+                           <height>30</height>
+                          </size>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QWidget" name="widget_50" native="true">
+                      <layout class="QHBoxLayout" name="horizontalLayout_24">
+                       <property name="topMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
+                       <item>
+                        <widget class="QLabel" name="label_14">
+                         <property name="text">
+                          <string>Trạng thái</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QComboBox" name="cb101_2">
+                         <item>
+                          <property name="text">
+                           <string>Chưa thực hiện</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>Đang thực hiện</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>Đã hoàn thành</string>
+                          </property>
+                         </item>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QWidget" name="widget_51" native="true">
+                      <layout class="QHBoxLayout" name="horizontalLayout_26">
+                       <item>
+                        <widget class="QLabel" name="label_16">
+                         <property name="text">
+                          <string>Phân loại công việc</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QComboBox" name="cb102_2">
+                         <item>
+                          <property name="text">
+                           <string>Việc theo vị trí</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>Việc khác được giao</string>
+                          </property>
+                         </item>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" name="widget_44" native="true">
+          <layout class="QHBoxLayout" name="horizontalLayout_17">
+           <item>
+            <widget class="QPushButton" name="bt204">
+             <property name="minimumSize">
+              <size>
+               <width>400</width>
+               <height>60</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>600</width>
+               <height>60</height>
+              </size>
+             </property>
+             <property name="toolTip">
+              <string>Lưu công việc</string>
              </property>
              <property name="text">
               <string/>
              </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
+             <property name="icon">
+              <iconset resource="resources.qrc">
+               <normaloff>:/icons/icons/save.svg</normaloff>:/icons/icons/save.svg</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>30</width>
+               <height>30</height>
+              </size>
              </property>
             </widget>
            </item>
@@ -1533,283 +1756,9 @@
       </widget>
       <widget class="QWidget" name="tab">
        <attribute name="title">
-        <string>QCO</string>
+        <string>Sửa xóa công việc</string>
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_22">
-        <item>
-         <widget class="QWidget" name="widget_31" native="true">
-          <layout class="QHBoxLayout" name="horizontalLayout_20">
-           <item>
-            <widget class="QWidget" name="widget_26" native="true">
-             <layout class="QVBoxLayout" name="verticalLayout_16">
-              <item>
-               <widget class="QWidget" name="widget_19" native="true">
-                <layout class="QHBoxLayout" name="horizontalLayout_21">
-                 <property name="topMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="bottomMargin">
-                  <number>0</number>
-                 </property>
-                 <item>
-                  <widget class="QLabel" name="label_5">
-                   <property name="text">
-                    <string>Từ ngày:</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QDateEdit" name="de301">
-                   <property name="displayFormat">
-                    <string>d/M/yyyy</string>
-                   </property>
-                   <property name="calendarPopup">
-                    <bool>true</bool>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QDateEdit" name="de302">
-                   <property name="displayFormat">
-                    <string>d/M/yyyy</string>
-                   </property>
-                   <property name="calendarPopup">
-                    <bool>true</bool>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-              <item>
-               <widget class="QWidget" name="widget_40" native="true">
-                <layout class="QHBoxLayout" name="horizontalLayout_25">
-                 <property name="topMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="bottomMargin">
-                  <number>0</number>
-                 </property>
-                 <item>
-                  <widget class="QLabel" name="label_15">
-                   <property name="text">
-                    <string>Style:</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QLineEdit" name="tb301">
-                   <property name="text">
-                    <string/>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-           </item>
-           <item>
-            <widget class="QWidget" name="widget_39" native="true">
-             <layout class="QVBoxLayout" name="verticalLayout_17"/>
-            </widget>
-           </item>
-           <item>
-            <widget class="QWidget" name="widget_42" native="true">
-             <layout class="QVBoxLayout" name="verticalLayout_18">
-              <item>
-               <widget class="QWidget" name="widget_43" native="true">
-                <layout class="QHBoxLayout" name="horizontalLayout_27">
-                 <property name="topMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="bottomMargin">
-                  <number>0</number>
-                 </property>
-                 <item>
-                  <widget class="QLabel" name="label_17">
-                   <property name="text">
-                    <string>Chuyền:</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QLineEdit" name="tb302">
-                   <property name="text">
-                    <string/>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-              <item>
-               <widget class="QWidget" name="widget_45" native="true">
-                <layout class="QHBoxLayout" name="horizontalLayout_28">
-                 <property name="topMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="bottomMargin">
-                  <number>0</number>
-                 </property>
-                 <item>
-                  <widget class="QLabel" name="label_18">
-                   <property name="text">
-                    <string>Chuyền PDN:</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QLineEdit" name="tb303">
-                   <property name="text">
-                    <string/>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-           </item>
-           <item>
-            <widget class="QWidget" name="widget_46" native="true">
-             <layout class="QVBoxLayout" name="verticalLayout_20">
-              <property name="spacing">
-               <number>0</number>
-              </property>
-              <property name="topMargin">
-               <number>0</number>
-              </property>
-              <property name="bottomMargin">
-               <number>0</number>
-              </property>
-              <item>
-               <widget class="QPushButton" name="bt305">
-                <property name="minimumSize">
-                 <size>
-                  <width>100</width>
-                  <height>40</height>
-                 </size>
-                </property>
-                <property name="toolTip">
-                 <string>Tìm kiếm</string>
-                </property>
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="icon">
-                 <iconset resource="resources.qrc">
-                  <normaloff>:/icons/icons/search.svg</normaloff>:/icons/icons/search.svg</iconset>
-                </property>
-                <property name="iconSize">
-                 <size>
-                  <width>30</width>
-                  <height>30</height>
-                 </size>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QPushButton" name="bt303">
-                <property name="minimumSize">
-                 <size>
-                  <width>100</width>
-                  <height>40</height>
-                 </size>
-                </property>
-                <property name="toolTip">
-                 <string>Tải lên file Excel</string>
-                </property>
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="icon">
-                 <iconset resource="resources.qrc">
-                  <normaloff>:/icons/icons/upload.svg</normaloff>:/icons/icons/upload.svg</iconset>
-                </property>
-                <property name="iconSize">
-                 <size>
-                  <width>30</width>
-                  <height>30</height>
-                 </size>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-           </item>
-           <item>
-            <widget class="QWidget" name="widget_48" native="true">
-             <layout class="QVBoxLayout" name="verticalLayout_21">
-              <property name="spacing">
-               <number>0</number>
-              </property>
-              <property name="topMargin">
-               <number>0</number>
-              </property>
-              <property name="bottomMargin">
-               <number>0</number>
-              </property>
-              <item>
-               <widget class="QPushButton" name="bt302">
-                <property name="minimumSize">
-                 <size>
-                  <width>100</width>
-                  <height>40</height>
-                 </size>
-                </property>
-                <property name="toolTip">
-                 <string>Xóa dòng</string>
-                </property>
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="icon">
-                 <iconset resource="resources.qrc">
-                  <normaloff>:/icons/icons/delete.svg</normaloff>:/icons/icons/delete.svg</iconset>
-                </property>
-                <property name="iconSize">
-                 <size>
-                  <width>30</width>
-                  <height>30</height>
-                 </size>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QPushButton" name="bt304">
-                <property name="minimumSize">
-                 <size>
-                  <width>100</width>
-                  <height>40</height>
-                 </size>
-                </property>
-                <property name="toolTip">
-                 <string>Tải xuống file Excel</string>
-                </property>
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="icon">
-                 <iconset resource="resources.qrc">
-                  <normaloff>:/icons/icons/download.svg</normaloff>:/icons/icons/download.svg</iconset>
-                </property>
-                <property name="iconSize">
-                 <size>
-                  <width>30</width>
-                  <height>30</height>
-                 </size>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-        </item>
         <item>
          <widget class="QWidget" name="widget_49" native="true">
           <property name="sizePolicy">
@@ -1818,103 +1767,872 @@
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
-          <layout class="QHBoxLayout" name="horizontalLayout_29">
-           <property name="spacing">
-            <number>0</number>
-           </property>
-           <property name="topMargin">
-            <number>0</number>
-           </property>
-           <property name="bottomMargin">
-            <number>0</number>
-           </property>
+          <layout class="QVBoxLayout" name="verticalLayout_17">
            <item>
-            <widget class="QTableWidget" name="tableWidget_3">
-             <column>
-              <property name="text">
-               <string>STT</string>
-              </property>
-             </column>
-             <column>
-              <property name="text">
-               <string>Chuyền</string>
-              </property>
-             </column>
-             <column>
-              <property name="text">
-               <string>Style</string>
-              </property>
-             </column>
-             <column>
-              <property name="text">
-               <string>Từ ngày</string>
-              </property>
-             </column>
-             <column>
-              <property name="text">
-               <string>Đến ngày</string>
-              </property>
-             </column>
-             <column>
-              <property name="text">
-               <string>QCO</string>
-              </property>
-             </column>
-             <column>
-              <property name="text">
-               <string>Chuyền PDN</string>
-              </property>
-             </column>
-             <column>
-              <property name="text">
-               <string>Kiểu dáng</string>
-              </property>
-             </column>
-             <column>
-              <property name="text">
-               <string>ID</string>
-              </property>
-             </column>
+            <widget class="QWidget" name="widget_48" native="true">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_24">
+              <item>
+               <widget class="QWidget" name="widget_36" native="true">
+                <layout class="QHBoxLayout" name="horizontalLayout_25">
+                 <item>
+                  <widget class="QWidget" name="widget_30" native="true">
+                   <layout class="QVBoxLayout" name="verticalLayout_14">
+                    <item>
+                     <widget class="QWidget" name="widget_62" native="true">
+                      <layout class="QHBoxLayout" name="horizontalLayout_39">
+                       <property name="topMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
+                       <item>
+                        <widget class="QLabel" name="label_28">
+                         <property name="text">
+                          <string>ID công việc </string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLineEdit" name="lineEdit_7">
+                         <property name="sizePolicy">
+                          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                           <horstretch>0</horstretch>
+                           <verstretch>0</verstretch>
+                          </sizepolicy>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QWidget" name="widget_80" native="true">
+                      <layout class="QHBoxLayout" name="horizontalLayout_56">
+                       <property name="topMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
+                       <item>
+                        <widget class="QLabel" name="label_43">
+                         <property name="text">
+                          <string>Mã công ty</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QComboBox" name="cb103_4">
+                         <item>
+                          <property name="text">
+                           <string>IC</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>IB</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>ISV</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>LV</string>
+                          </property>
+                         </item>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QWidget" name="widget_67" native="true">
+                      <layout class="QHBoxLayout" name="horizontalLayout_44">
+                       <property name="topMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
+                       <item>
+                        <widget class="QLabel" name="label_32">
+                         <property name="text">
+                          <string>Nhóm</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QComboBox" name="cb104_3">
+                         <item>
+                          <property name="text">
+                           <string>Hành chính</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>Nhân sự</string>
+                          </property>
+                         </item>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QWidget" name="widget_39" native="true">
+                      <layout class="QHBoxLayout" name="horizontalLayout_27">
+                       <property name="topMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
+                       <item>
+                        <widget class="QLabel" name="label_15">
+                         <property name="text">
+                          <string>Phân loại dự án</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QComboBox" name="comboBox_6">
+                         <item>
+                          <property name="text">
+                           <string>Việc theo dự án</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>Công việc hàng ngày</string>
+                          </property>
+                         </item>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QWidget" name="widget_68" native="true">
+                      <layout class="QHBoxLayout" name="horizontalLayout_45">
+                       <property name="topMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
+                       <item>
+                        <widget class="QLabel" name="label_33">
+                         <property name="text">
+                          <string>Mã dự án</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QComboBox" name="comboBox_9">
+                         <item>
+                          <property name="text">
+                           <string>DA.1.1</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>DA.1.2</string>
+                          </property>
+                         </item>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QWidget" name="widget_69" native="true">
+                      <layout class="QHBoxLayout" name="horizontalLayout_46">
+                       <property name="topMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
+                       <item>
+                        <widget class="QLabel" name="label_34">
+                         <property name="text">
+                          <string>Tên dự án</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLabel" name="label_35">
+                         <property name="text">
+                          <string>Tên dự án 1</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QWidget" name="widget_70" native="true">
+                      <layout class="QHBoxLayout" name="horizontalLayout_47">
+                       <property name="topMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
+                       <item>
+                        <widget class="QLabel" name="label_36">
+                         <property name="text">
+                          <string>Mã dự án mới</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLineEdit" name="lineEdit_4">
+                         <property name="sizePolicy">
+                          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                           <horstretch>0</horstretch>
+                           <verstretch>0</verstretch>
+                          </sizepolicy>
+                         </property>
+                         <property name="text">
+                          <string/>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QWidget" name="widget_71" native="true">
+                      <layout class="QHBoxLayout" name="horizontalLayout_48">
+                       <property name="topMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
+                       <item>
+                        <widget class="QLabel" name="label_37">
+                         <property name="text">
+                          <string>Tên dự án mới</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLineEdit" name="lineEdit_5">
+                         <property name="sizePolicy">
+                          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                           <horstretch>0</horstretch>
+                           <verstretch>0</verstretch>
+                          </sizepolicy>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QWidget" name="widget_72" native="true">
+                      <layout class="QHBoxLayout" name="horizontalLayout_49">
+                       <property name="topMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
+                       <item>
+                        <spacer name="horizontalSpacer_3">
+                         <property name="orientation">
+                          <enum>Qt::Horizontal</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>40</width>
+                           <height>20</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
+                       <item>
+                        <widget class="QPushButton" name="bt201_2">
+                         <property name="minimumSize">
+                          <size>
+                           <width>200</width>
+                           <height>40</height>
+                          </size>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>200</width>
+                           <height>40</height>
+                          </size>
+                         </property>
+                         <property name="toolTip">
+                          <string>Lưu dự án mới</string>
+                         </property>
+                         <property name="text">
+                          <string/>
+                         </property>
+                         <property name="icon">
+                          <iconset resource="resources.qrc">
+                           <normaloff>:/icons/icons/save.svg</normaloff>:/icons/icons/save.svg</iconset>
+                         </property>
+                         <property name="iconSize">
+                          <size>
+                           <width>30</width>
+                           <height>30</height>
+                          </size>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QWidget" name="widget_42" native="true">
+                   <layout class="QVBoxLayout" name="verticalLayout_16">
+                    <item>
+                     <widget class="QWidget" name="widget_73" native="true">
+                      <layout class="QHBoxLayout" name="horizontalLayout_50">
+                       <property name="topMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
+                       <item>
+                        <widget class="QLabel" name="label_38">
+                         <property name="text">
+                          <string>Chức năng</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QComboBox" name="comboBox_10">
+                         <item>
+                          <property name="text">
+                           <string>Tham mưu</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>Hoạch định chiến lược, mục tiêu và xây dựng kế hoạch</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>Quản lý điều hành chung hoạt động Phòng/Ban</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>Trưởng nhóm hành chính</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>Nhân viên hành chính</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>Lái xe chở người</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>Bảo vệ</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>Tạp vụ</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>Nhân viên bếp ăn</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>Nhân viên Thủ quỹ</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>Trưởng nhóm Nhân sự</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>Nhân viên Nhân sự</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>Chức năng khác</string>
+                          </property>
+                         </item>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QWidget" name="widget_74" native="true">
+                      <layout class="QHBoxLayout" name="horizontalLayout_51">
+                       <property name="topMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
+                       <item>
+                        <widget class="QLabel" name="label_39">
+                         <property name="text">
+                          <string>Nhiệm vụ</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QComboBox" name="comboBox_11">
+                         <item>
+                          <property name="text">
+                           <string>Thực thi công tác nhân sự</string>
+                          </property>
+                         </item>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QWidget" name="widget_75" native="true">
+                      <layout class="QHBoxLayout" name="horizontalLayout_52">
+                       <property name="topMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
+                       <item>
+                        <widget class="QLabel" name="label_40">
+                         <property name="text">
+                          <string>Nhiệm vụ cụ thể</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QComboBox" name="comboBox_12">
+                         <property name="maximumSize">
+                          <size>
+                           <width>16777215</width>
+                           <height>16777215</height>
+                          </size>
+                         </property>
+                         <item>
+                          <property name="text">
+                           <string>4NVNS1</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>4NVNS2</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>4NVNS3</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>4NVNS4</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>4NVNS5</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>4NVNS6</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>4NVNS7</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>4NVNS8</string>
+                          </property>
+                         </item>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QWidget" name="widget_76" native="true">
+                      <layout class="QHBoxLayout" name="horizontalLayout_53">
+                       <property name="topMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
+                       <item>
+                        <widget class="QLabel" name="label_41">
+                         <property name="text">
+                          <string>Tên công việc</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QComboBox" name="comboBox_13">
+                         <item>
+                          <property name="text">
+                           <string>Công việc 1</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>Công việc 2</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>Công việc 3</string>
+                          </property>
+                         </item>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QWidget" name="widget_77" native="true">
+                      <layout class="QHBoxLayout" name="horizontalLayout_54">
+                       <property name="topMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
+                       <item>
+                        <widget class="QLabel" name="label_42">
+                         <property name="text">
+                          <string>Tên công việc mới</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLineEdit" name="lineEdit_6">
+                         <property name="sizePolicy">
+                          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                           <horstretch>0</horstretch>
+                           <verstretch>0</verstretch>
+                          </sizepolicy>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QWidget" name="widget_78" native="true">
+                      <layout class="QHBoxLayout" name="horizontalLayout_55">
+                       <property name="topMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
+                       <item>
+                        <spacer name="horizontalSpacer_4">
+                         <property name="orientation">
+                          <enum>Qt::Horizontal</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>40</width>
+                           <height>20</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
+                       <item>
+                        <widget class="QPushButton" name="bt201_4">
+                         <property name="minimumSize">
+                          <size>
+                           <width>200</width>
+                           <height>40</height>
+                          </size>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>200</width>
+                           <height>40</height>
+                          </size>
+                         </property>
+                         <property name="toolTip">
+                          <string>Lưu dự án mới</string>
+                         </property>
+                         <property name="text">
+                          <string/>
+                         </property>
+                         <property name="icon">
+                          <iconset resource="resources.qrc">
+                           <normaloff>:/icons/icons/save.svg</normaloff>:/icons/icons/save.svg</iconset>
+                         </property>
+                         <property name="iconSize">
+                          <size>
+                           <width>30</width>
+                           <height>30</height>
+                          </size>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QWidget" name="widget_52" native="true">
+                      <layout class="QHBoxLayout" name="horizontalLayout_28">
+                       <property name="topMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
+                       <item>
+                        <widget class="QLabel" name="label_17">
+                         <property name="text">
+                          <string>Trạng thái</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QComboBox" name="cb101_3">
+                         <item>
+                          <property name="text">
+                           <string>Chưa thực hiện</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>Đang thực hiện</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>Đã hoàn thành</string>
+                          </property>
+                         </item>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QWidget" name="widget_79" native="true">
+                      <layout class="QHBoxLayout" name="horizontalLayout_29">
+                       <item>
+                        <widget class="QLabel" name="label_18">
+                         <property name="text">
+                          <string>Phân loại công việc</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QComboBox" name="cb102_3">
+                         <item>
+                          <property name="text">
+                           <string>Việc theo vị trí</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>Việc khác được giao</string>
+                          </property>
+                         </item>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
             </widget>
            </item>
-          </layout>
-         </widget>
-        </item>
-        <item>
-         <widget class="QWidget" name="widget_36" native="true">
-          <layout class="QVBoxLayout" name="verticalLayout_14">
-           <property name="spacing">
-            <number>0</number>
-           </property>
-           <property name="topMargin">
-            <number>0</number>
-           </property>
-           <property name="bottomMargin">
-            <number>0</number>
-           </property>
            <item>
-            <widget class="QProgressBar" name="progressBar_3">
-             <property name="value">
-              <number>24</number>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLabel" name="lb101_2">
-             <property name="font">
-              <font>
-               <pointsize>12</pointsize>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true"/>
-             </property>
-             <property name="text">
-              <string/>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
+            <widget class="QWidget" name="widget_45" native="true">
+             <layout class="QHBoxLayout" name="horizontalLayout_8">
+              <item>
+               <spacer name="horizontalSpacer_6">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QPushButton" name="pushButton">
+                <property name="minimumSize">
+                 <size>
+                  <width>400</width>
+                  <height>60</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>600</width>
+                  <height>60</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Xóa công việc</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="resources.qrc">
+                  <normaloff>:/icons/icons/delete.svg</normaloff>:/icons/icons/delete.svg</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>40</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_7">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QPushButton" name="bt204_2">
+                <property name="minimumSize">
+                 <size>
+                  <width>400</width>
+                  <height>60</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>600</width>
+                  <height>60</height>
+                 </size>
+                </property>
+                <property name="toolTip">
+                 <string>Lưu công việc</string>
+                </property>
+                <property name="text">
+                 <string>Lưu thay đổi</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="resources.qrc">
+                  <normaloff>:/icons/icons/save.svg</normaloff>:/icons/icons/save.svg</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>40</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_5">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QPushButton" name="pushButton_2">
+                <property name="minimumSize">
+                 <size>
+                  <width>400</width>
+                  <height>60</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>600</width>
+                  <height>60</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Thêm chi tiết công việc</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="resources.qrc">
+                  <normaloff>:/icons/icons/plus.svg</normaloff>:/icons/icons/plus.svg</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>40</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_9">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
             </widget>
            </item>
           </layout>
@@ -1932,7 +2650,7 @@
      <x>0</x>
      <y>0</y>
      <width>1200</width>
-     <height>21</height>
+     <height>18</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu11_2">
@@ -1942,6 +2660,8 @@
     <addaction name="menu11"/>
     <addaction name="menu13"/>
     <addaction name="menu14"/>
+    <addaction name="actionTh_m_chi_ti_t_c_ng_vi_c"/>
+    <addaction name="actionS_a_x_a_chi_ti_t_c_ng_vi_c"/>
    </widget>
    <widget class="QMenu" name="menu_ng_xu_t">
     <property name="title">
@@ -2084,6 +2804,16 @@
     <string>Cài đặt cơ sở dữ liệu</string>
    </property>
   </action>
+  <action name="actionTh_m_chi_ti_t_c_ng_vi_c">
+   <property name="text">
+    <string>Thêm chi tiết công việc</string>
+   </property>
+  </action>
+  <action name="actionS_a_x_a_chi_ti_t_c_ng_vi_c">
+   <property name="text">
+    <string>Sửa xóa chi tiết công việc</string>
+   </property>
+  </action>
  </widget>
  <tabstops>
   <tabstop>tb001</tabstop>
@@ -2092,7 +2822,7 @@
   <tabstop>tabWidget</tabstop>
   <tabstop>tableWidget</tabstop>
   <tabstop>de101</tabstop>
-  <tabstop>bt104</tabstop>
+  <tabstop>bt101</tabstop>
  </tabstops>
  <resources>
   <include location="resources.qrc"/>
