@@ -173,6 +173,13 @@ class MainApp(QMainWindow,ui):
         self.cb206.currentIndexChanged.connect(self.load_lb206)
         self.bt201.clicked.connect(self.add_du_an)
         self.bt207.clicked.connect(self.add_cong_viec)
+        self.rd201.toggled.connect(self.rd201_change)
+
+    def rd201_change(self):
+        if self.rd201.isChecked():
+            self.cb200.clear()
+        else:
+            self.load_cb200()
 
     def msgbox(self, message):
         QtWidgets.QMessageBox.information(self, "Thông báo", message)
@@ -264,7 +271,31 @@ class MainApp(QMainWindow,ui):
         connection.close()
         self.load_cb207()
         self.le207.setText("")
+    def load_cb200(self):
+        connection = connect_to_db()
+        cursor = connection.cursor()
 
+        cursor.execute("SELECT ID FROM DANH_SACH_CONG_VIEC")
+        results = cursor.fetchall()
+
+        self.cb200.clear()  # Xóa các item hiện có
+        for row in results:
+            self.cb200.addItem(str(row[0])) 
+
+        connection.close()
+        self.cb200.setEditable(True)
+        self.cb200.completer().setFilterMode(QtCore.Qt.MatchContains)  # Gợi ý theo từ khóa chứa
+        self.cb200.completer().setCompletionMode(QtWidgets.QCompleter.PopupCompletion)
+        self.cb200.setStyleSheet("""
+            QComboBox {
+                background-color: #2e2e2e;
+                color: white;
+            }
+            QComboBox QAbstractItemView {
+                background-color: #3c3c3c;
+                color: white;
+            }
+        """)
     def load_cb201(self):
         connection = connect_to_db()
         cursor = connection.cursor()
@@ -523,6 +554,7 @@ class MainApp(QMainWindow,ui):
         self.load_cb202()
         self.load_cb204()
         self.load_cb207()
+        self.rd201.setChecked(True)
     
     def show_QCO_tab(self):
         self.menuBar.setVisible(True)
