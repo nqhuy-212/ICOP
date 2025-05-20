@@ -16,6 +16,7 @@ from PyQt5.QtWidgets import (
     QApplication, QMainWindow, QMessageBox, QFileDialog, QTableWidgetItem
 )
 from PyQt5 import QtCore, QtWidgets
+from PyQt5.QtWidgets import QCompleter
 # from PyQt5.QtMultimedia import QSound
 from PyQt5.uic import loadUiType
 # from PyQt5.QtWebEngineWidgets import QWebEngineView
@@ -171,6 +172,7 @@ class MainApp(QMainWindow,ui):
         self.cb205.currentIndexChanged.connect(self.load_cb206)
         self.cb206.currentIndexChanged.connect(self.load_lb206)
         self.bt201.clicked.connect(self.add_du_an)
+        self.bt207.clicked.connect(self.add_cong_viec)
 
     def msgbox(self, message):
         QtWidgets.QMessageBox.information(self, "Thông báo", message)
@@ -235,8 +237,33 @@ class MainApp(QMainWindow,ui):
 
         connection.close()
         self.load_cb202()
-        ma_du_an = self.le201.setText("")
-        ten_du_an = self.te201.setText("")
+        self.le201.setText("")
+        self.te201.setText("")
+
+    def add_cong_viec(self):
+        connection = connect_to_db()
+        cursor = connection.cursor()
+
+        mnv = self.lb004.text().strip()
+        ten_cv = self.le207.text()
+
+        if mnv and ten_cv:
+            try:
+                cursor.execute(
+                    "INSERT INTO GHI_NHO_TEN_CONG_VIEC (MNV, Ten_cong_viec) VALUES (?, ?)",
+                    (mnv, ten_cv)
+                )
+                connection.commit()
+                self.msgbox("✅ Thêm công việc mới thành công")
+            except Exception as e:
+                print("Lỗi khi thêm công việc mới:", e)
+                self.msgbox("⚠️ Tên công việc đã tồn tại hoặc có lỗi khác")
+        else:
+            self.msgbox("⚠️ Vui lòng nhập đầy đủ tên công việc mới")
+
+        connection.close()
+        self.load_cb207()
+        self.le207.setText("")
 
     def load_cb201(self):
         connection = connect_to_db()
@@ -305,6 +332,19 @@ class MainApp(QMainWindow,ui):
                 self.cb207.addItem(row[0])  # row[0] 
 
             connection.close() 
+            self.cb207.setEditable(True)
+            self.cb207.completer().setFilterMode(QtCore.Qt.MatchContains)  # Gợi ý theo từ khóa chứa
+            self.cb207.completer().setCompletionMode(QtWidgets.QCompleter.PopupCompletion)
+            self.cb207.setStyleSheet("""
+                QComboBox {
+                    background-color: #2e2e2e;
+                    color: white;
+                }
+                QComboBox QAbstractItemView {
+                    background-color: #3c3c3c;
+                    color: white;
+                }
+            """)
     def load_cb202(self):
         connection = connect_to_db()
         cursor = connection.cursor()
