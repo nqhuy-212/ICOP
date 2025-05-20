@@ -15,6 +15,7 @@ from PyQt5.QtGui import QColor, QPixmap
 from PyQt5.QtWidgets import (
     QApplication, QMainWindow, QMessageBox, QFileDialog, QTableWidgetItem
 )
+from PyQt5 import QtCore, QtWidgets
 # from PyQt5.QtMultimedia import QSound
 from PyQt5.uic import loadUiType
 # from PyQt5.QtWebEngineWidgets import QWebEngineView
@@ -46,7 +47,7 @@ def get_resource_path(relative_path):
 
 def connect_to_db(): 
     try:
-        db_file = r"D:\IC.sqlite"
+        db_file = r"D:\nqhuy\VA\ICOP\IC.sqlite"
         # password = "huyie"
         connection = sqlite3.connect(db_file)
         return connection
@@ -84,6 +85,7 @@ def table_to_dataframe(table_widget,headers):
         return df
     
 ui, _ = loadUiType(get_resource_path('app.ui'))
+
 
 #config URL cho engine
 # BASE_DIR = Path(__file__).resolve().parent
@@ -161,6 +163,17 @@ class MainApp(QMainWindow,ui):
         # ####
         # self.bt204.clicked.connect(self.tai_xuong_file_mau_Checker)
         # ####
+        self.cb202.currentIndexChanged.connect(self.load_lb202)
+        self.cb203.currentIndexChanged.connect(self.load_cb204)
+        self.cb204.currentIndexChanged.connect(self.load_lb204)
+        self.cb204.currentIndexChanged.connect(self.load_cb205)
+        self.cb205.currentIndexChanged.connect(self.load_lb205)
+        self.cb205.currentIndexChanged.connect(self.load_cb206)
+        self.cb206.currentIndexChanged.connect(self.load_lb206)
+        self.bt201.clicked.connect(self.add_du_an)
+
+    def msgbox(self, message):
+        QtWidgets.QMessageBox.information(self, "Thông báo", message)
 
     def login(self):
         # fty = self.cb001.currentText()
@@ -198,17 +211,170 @@ class MainApp(QMainWindow,ui):
         else:
             # QSound.play(":/sounds/sounds/error.wav") # Phát âm thanh lỗi
             self.lb002.setText("Tài khoản hoặc mật khẩu không đúng!")
-    def exec_CALCULATE_TNC_EFF(self):
-        connection = connect_to_db()
-        if connection is None:
-            self.lb003.setText("Không thể kết nối tới cơ sở dữ liệu!")
-            return
-        cursor = connection.cursor()
-        cursor.execute("EXEC CALCULATE_TNC_EFF")
-        connection.commit()
-        if connection:
-            connection.close()
 
+    def add_du_an(self):
+        connection = connect_to_db()
+        cursor = connection.cursor()
+
+        ma_du_an = self.le201.text().strip()
+        ten_du_an = self.te201.toPlainText()
+
+        if ma_du_an and ten_du_an:
+            try:
+                cursor.execute(
+                    "INSERT INTO DANH_SACH_DU_AN (ma_du_an, ten_du_an) VALUES (?, ?)",
+                    (ma_du_an, ten_du_an)
+                )
+                connection.commit()
+                self.msgbox("✅ Thêm dự án thành công")
+            except Exception as e:
+                print("Lỗi khi thêm dự án:", e)
+                self.msgbox("⚠️ Mã dự án đã tồn tại hoặc có lỗi khác")
+        else:
+            self.msgbox("⚠️ Vui lòng nhập đầy đủ mã và tên dự án")
+
+        connection.close()
+        self.load_cb202()
+        ma_du_an = self.le201.setText("")
+        ten_du_an = self.te201.setText("")
+
+    def load_cb201(self):
+        connection = connect_to_db()
+        cursor = connection.cursor()
+
+        ma_phong_ban = self.lb000.text()
+        cursor.execute("SELECT DISTINCT NHOM FROM DANH_SACH_CBCNV WHERE Ma_phong_ban = ?",(ma_phong_ban,))
+        results = cursor.fetchall()
+
+        self.cb201.clear()  # Xóa các item hiện có
+        for row in results:
+            self.cb201.addItem(row[0])  # row[0] 
+
+        connection.close()
+
+    def load_cb204(self):
+            connection = connect_to_db()
+            cursor = connection.cursor()
+
+            ma_phong_ban = self.lb000.text()
+            phan_loai = self.cb203.currentText()
+            cursor.execute("SELECT DISTINCT Ma_chuc_nang FROM CHUC_NANG_NHIEM_VU WHERE Ma_phong_ban = ? AND phan_loai = ?",(ma_phong_ban,phan_loai))
+            results = cursor.fetchall()
+
+            self.cb204.clear()  # Xóa các item hiện có
+            for row in results:
+                self.cb204.addItem(row[0])  # row[0] 
+
+            connection.close()
+    def load_cb205(self):
+            connection = connect_to_db()
+            cursor = connection.cursor()
+
+            ma_chuc_nang = self.cb204.currentText()
+            cursor.execute("SELECT DISTINCT Ma_nhiem_vu FROM CHUC_NANG_NHIEM_VU WHERE Ma_chuc_nang = ?",(ma_chuc_nang,))
+            results = cursor.fetchall()
+
+            self.cb205.clear()  # Xóa các item hiện có
+            for row in results:
+                self.cb205.addItem(row[0])  # row[0] 
+
+            connection.close()   
+    def load_cb206(self):
+            connection = connect_to_db()
+            cursor = connection.cursor()
+
+            ma_nhiem_vu = self.cb205.currentText()
+            cursor.execute("SELECT DISTINCT Ma_nhiem_vu_cu_the FROM CHUC_NANG_NHIEM_VU WHERE Ma_nhiem_vu = ?",(ma_nhiem_vu,))
+            results = cursor.fetchall()
+
+            self.cb206.clear()  # Xóa các item hiện có
+            for row in results:
+                self.cb206.addItem(row[0])  # row[0] 
+
+            connection.close() 
+    def load_cb207(self):
+            connection = connect_to_db()
+            cursor = connection.cursor()
+
+            mnv = self.lb004.text()
+            cursor.execute("SELECT Ten_cong_viec FROM GHI_NHO_TEN_CONG_VIEC WHERE MNV = ?",(mnv,))
+            results = cursor.fetchall()
+
+            self.cb207.clear()  # Xóa các item hiện có
+            for row in results:
+                self.cb207.addItem(row[0])  # row[0] 
+
+            connection.close() 
+    def load_cb202(self):
+        connection = connect_to_db()
+        cursor = connection.cursor()
+
+        cursor.execute("SELECT ma_du_an FROM danh_sach_du_an")
+        results = cursor.fetchall()
+
+        self.cb202.clear()  # Xóa các item hiện có
+        for row in results:
+            self.cb202.addItem(row[0])  # row[0] là 'ten_du_an'
+
+        connection.close()
+        self.cb202.setEditable(True)
+        self.cb202.completer().setFilterMode(QtCore.Qt.MatchContains)  # Gợi ý theo từ khóa chứa
+        self.cb202.completer().setCompletionMode(QtWidgets.QCompleter.PopupCompletion)
+        self.cb202.setStyleSheet("""
+            QComboBox {
+                background-color: #2e2e2e;
+                color: white;
+            }
+            QComboBox QAbstractItemView {
+                background-color: #3c3c3c;
+                color: white;
+            }
+        """)
+    def load_lb202(self):
+        connection = connect_to_db()
+        cursor = connection.cursor()
+
+        ma_du_an = self.cb202.currentText()
+        cursor.execute("SELECT ten_du_an FROM danh_sach_du_an where ma_du_an = ?",(ma_du_an,))
+        results = cursor.fetchone()
+        if results:
+            self.lb202.setText(results[0])
+        else:
+            self.lb202.setText("")
+
+    def load_lb204(self):
+        connection = connect_to_db()
+        cursor = connection.cursor()
+
+        ma_chuc_nang = self.cb204.currentText()
+        cursor.execute("SELECT Chuc_nang FROM CHUC_NANG_NHIEM_VU where Ma_chuc_nang = ?",(ma_chuc_nang,))
+        results = cursor.fetchone()
+        if results:
+            self.lb204.setText(results[0])
+        else:
+            self.lb204.setText("")
+    def load_lb205(self):
+        connection = connect_to_db()
+        cursor = connection.cursor()
+
+        ma_nhiem_vu = self.cb205.currentText()
+        cursor.execute("SELECT Nhiem_vu FROM CHUC_NANG_NHIEM_VU where Ma_nhiem_vu = ?",(ma_nhiem_vu,))
+        results = cursor.fetchone()
+        if results:
+            self.lb205.setText(results[0])
+        else:
+            self.lb205.setText("")
+    def load_lb206(self):
+        connection = connect_to_db()
+        cursor = connection.cursor()
+
+        ma_nhiem_vu_cu_the = self.cb206.currentText()
+        cursor.execute("SELECT Nhiem_vu_cu_the FROM CHUC_NANG_NHIEM_VU where Ma_nhiem_vu_cu_the = ?",(ma_nhiem_vu_cu_the,))
+        results = cursor.fetchone()
+        if results:
+            self.lb206.setText(results[0])
+        else:
+            self.lb206.setText("")
     def search_ETS(self):
         nha_may = self.lb000.text()
         tu_ngay = self.de101.date().toString("yyyy-MM-dd")
@@ -313,6 +479,10 @@ class MainApp(QMainWindow,ui):
         self.menuBar.setVisible(True)
         self.tabWidget.setCurrentIndex(2) 
         self.lb003.setText("Thêm công việc mới")  
+        self.load_cb201()
+        self.load_cb202()
+        self.load_cb204()
+        self.load_cb207()
     
     def show_QCO_tab(self):
         self.menuBar.setVisible(True)
