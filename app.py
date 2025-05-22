@@ -984,7 +984,6 @@ class MainApp(QMainWindow,ui):
             return
         cursor = connection.cursor()
         id_cv = self.le301.text()
-        print(id_cv)
         sql = f"""
                 SELECT ID,Chi_tiet_cong_viec,Thoi_luong,Ngay_bat_dau,
                 Thoi_han,Tien_do,Trang_thai,Ghi_chu,Nguoi_thuc_hien,Chuc_danh,Diem_tien_do,Diem_chat_luong,
