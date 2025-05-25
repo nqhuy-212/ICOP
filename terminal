@@ -16,4 +16,6 @@ pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-hos
 
 pyinstaller --onefile --windowed --icon=logo.ico --add-data "resources_rc.py;." --add-data "resources.qrc;." --add-data "app.ui;." app.py
 
+pyinstaller --noconfirm --name IC --windowed --icon=logo.ico --add-data "resources_rc.py;." --add-data "resources.qrc;." --add-data "app.ui;." app.py
+
 python app.py
